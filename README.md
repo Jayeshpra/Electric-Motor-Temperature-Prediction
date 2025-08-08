@@ -1,12 +1,12 @@
-# **Electric-Motor-Temperature-Prediction**
+# Electric-Motor-Temperature-Prediction
 
-## **Data Analysis**
+## Data Analysis
 
-## 📌 Project Overview
+### 📌 Project Overview
 
 This project performs **exploratory data analysis (EDA)** on a dataset containing parameters from a Permanent Magnet Synchronous Motor (PMSM). The goal is to understand relationships between motor parameters and prepare insights that could be used for **temperature prediction modeling**.
 
-## 📂 Dataset
+### 📂 Dataset
 
 Dataset link: https://www.kaggle.com/wkirgsn/electric-motor-temperature
 
@@ -28,7 +28,7 @@ The dataset contains various electrical, thermal, and operational measurements o
 * `torque` – Motor torque
 * `profile_id` – Profile identifier for operating conditions
 
-## 📊 Analysis Steps
+### 📊 Analysis Steps
 
 1. **Import Libraries**
 
@@ -53,7 +53,7 @@ The dataset contains various electrical, thermal, and operational measurements o
    * **Scatter plots** for feature relationships.
    * **Distribution plots** to analyze value spread.
 
-## 📦 Requirements
+### 📦 Requirements
 
 Install dependencies with:
 
@@ -61,7 +61,7 @@ Install dependencies with:
 pip install numpy pandas matplotlib seaborn plotly
 ```
 
-## 🚀 How to Run
+### 🚀 How to Run
 
 1. Clone the repository.
 2. Place your dataset file (`Dataset.csv`) in the appropriate path.
@@ -72,5 +72,96 @@ pip install numpy pandas matplotlib seaborn plotly
    ```
 4. Run cells sequentially to view the analysis.
 
+## Model Building
+
+### 📌 Features
+
+* Data preprocessing using **MinMaxScaler**
+* Models implemented:
+
+  * Linear Regression
+  * Decision Tree Regressor
+  * Random Forest Regressor *(optional – large size and slow to train)*
+  * Support Vector Regressor *(optional because of time consuming)*
+    
+* Model evaluation using:
+
+  * R² Score
+  * Mean Squared Error (MSE)
+  * Mean Absolute Error (MAE)
+    
+* Model saving using `joblib`
+
+### 🛠 Requirements
+
+* Python 3.8+
+* pandas
+* scikit-learn
+* joblib
+* jupyter (if using the notebook)
+
+Install dependencies:
+
+```python
+pip install pandas scikit-learn joblib jupyter
+```
+
+The dataset should contain the following columns:
+
+* `i_q` – q-axis current
+* `i_d` – d-axis current
+* `u_q` – q-axis voltage
+* `u_d` – d-axis voltage
+* `ambient` – ambient temperature
+* `motor_speed` – motor speed
+* `coolant` – coolant temperature
+* `pm` – permanent magnet temperature (target)
+
+Place the dataset in the working directory and update the file path in the code:
+
+```python
+Dataframe = pd.read_csv("path/to/Dataset.csv") # update the file path with your dataset path
+```
+
+### 📈 Model Performance
+
+From testing:
+
+* Decision Tree achieved 98% accuracy with much faster training compared to Random Forest.
+* Random Forest can be used for slightly better accuracy, but the model file is **3GB+**.
+* Random Forest and SVR take significantly longer to train.
+
+## 📂 Project Structure
+```
+ELECTRIC-MOTOR-TEMPERATURE-PREDICTION/
+│
+├── 📁 Data Collection and Analysis
+│    ├── Data_analysis.ipynb
+│    ├── dataset_download_script.py
+│
+├── 📁 Flask Application
+│    ├── 📁 static
+│    │    ├── body_background.webp
+│    │    ├── Manual_predict.css
+│    │    ├── motor_image.webp
+│    │    ├── result.css
+│    │
+│    ├── 📁 templates
+│    │    ├── Manual_predict.html
+│    │    ├── result.html
+│    │
+│    ├── app.py
+│
+├── 📁 Model Building
+│    ├── decision_tree_model.save
+│    ├── decision_tree_model.zip  # unzip this model and after that load in app.py
+│    ├── linear_model.save  # i saved this folder for just future usecase if you want to use this model instead of decidion_tree_model then load this model in app.py file 
+│    ├── mm_scaler_x.joblib  # scaler for input data
+│    ├── mm_scaler_y.joblib  # scaler for output data
+│    ├── model_building.ipynb  
+│
+├── Dataset.csv  # copy the path of this dataset and paste it at the time of loading of data.
+├── README.md
+```
 
 
