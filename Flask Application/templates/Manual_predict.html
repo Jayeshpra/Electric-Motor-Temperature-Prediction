@@ -9,13 +9,13 @@
 <body>
     <h1>Electric Motor Temperature Prediction</h1>
     <form action="/y_predict" method="post">
+        <input type="text" name="i_q" placeholder="Current q-component (amp)" required><br>
+        <input type="text" name="i_d" placeholder="Current d-component (amp)" required><br>
         <input type="text" name="u_q" placeholder="Voltage q-component (volt)" required><br>
         <input type="text" name="u_d" placeholder="Voltage d-component (volt)" required><br>
-        <input type="text" name="i_q" placeholder="Current q-component (volt)" required><br>
-        <input type="text" name="i_d" placeholder="Current d-component (volt)" required><br>
         <input type="text" name="ambient" placeholder="Ambient temperature (°C)" required><br>
-        <input type="text" name="coolant" placeholder="Coolant temperature (°C)" required><br>
         <input type="text" name="motor_speed" placeholder="Motor speed (rpm)" required><br>
+        <input type="text" name="coolant" placeholder="Coolant temperature (°C)" required><br>
         <input type="submit" value="Predict">
     </form>
 </body>
