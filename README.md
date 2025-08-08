@@ -2,11 +2,11 @@
 
 ## Data Analysis
 
-## 📌 Project Overview
+### 📌 Project Overview
 
 This project performs **exploratory data analysis (EDA)** on a dataset containing parameters from a Permanent Magnet Synchronous Motor (PMSM). The goal is to understand relationships between motor parameters and prepare insights that could be used for **temperature prediction modeling**.
 
-## 📂 Dataset
+### 📂 Dataset
 
 Dataset link: https://www.kaggle.com/wkirgsn/electric-motor-temperature
 
@@ -28,7 +28,7 @@ The dataset contains various electrical, thermal, and operational measurements o
 * `torque` – Motor torque
 * `profile_id` – Profile identifier for operating conditions
 
-## 📊 Analysis Steps
+### 📊 Analysis Steps
 
 1. **Import Libraries**
 
@@ -53,7 +53,7 @@ The dataset contains various electrical, thermal, and operational measurements o
    * **Scatter plots** for feature relationships.
    * **Distribution plots** to analyze value spread.
 
-## 📦 Requirements
+### 📦 Requirements
 
 Install dependencies with:
 
