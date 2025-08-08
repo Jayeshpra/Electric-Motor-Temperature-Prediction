@@ -1,6 +1,6 @@
-# Electric-Motor-Temperature-Prediction
+# **Electric-Motor-Temperature-Prediction**
 
-## Data Analysis
+## **Data Analysis**
 
 ## 📌 Project Overview
 
