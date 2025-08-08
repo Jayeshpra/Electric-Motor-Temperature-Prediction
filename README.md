@@ -132,7 +132,7 @@ From testing:
 * Random Forest and SVR take significantly longer to train.
 
 ## 📂 Project Structure
-```
+```python
 ELECTRIC-MOTOR-TEMPERATURE-PREDICTION/
 │
 ├── 📁 Data Collection and Analysis
