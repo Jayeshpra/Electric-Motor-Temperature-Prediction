@@ -67,9 +67,9 @@ pip install numpy pandas matplotlib seaborn plotly
 2. Place your dataset file (`Dataset.csv`) in the appropriate path.
 3. Open the Jupyter Notebook:
 
-   ```python
-   jupyter notebook Data_analysis.ipynb
-   ```
+```python
+jupyter notebook Data_analysis.ipynb
+```
 4. Run cells sequentially to view the analysis.
 
 ## Model Building
@@ -132,7 +132,7 @@ From testing:
 * Random Forest and SVR take significantly longer to train.
 
 ## 📂 Project Structure
-```python
+```bash
 ELECTRIC-MOTOR-TEMPERATURE-PREDICTION/
 │
 ├── 📁 Data Collection and Analysis
