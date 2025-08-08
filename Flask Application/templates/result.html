@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Result</title>
+    <link rel="stylesheet" href="static/result.css">
 </head>
 <body>
+    <h1>Your input data</h1>
+    <div>
+        <li>Current q-component (amp): {{input_data[0][0]}}</li>
+        <li>Current d-component (amp): {{input_data[0][1]}}</li>
+        <li>Voltage q-component (volt): {{input_data[0][2]}}</li>
+        <li>Voltage d-component (volt): {{input_data[0][3]}}</li>
+        <li>Ambient temperature (°C): {{input_data[0][4]}}</li>
+        <li>Motor speed (rpm): {{input_data[0][5]}}</li>
+        <li>Coolant temperature (°C): {{input_data[0][6]}}</li>
+    </div>
     <h2>Prediction Result</h2>
     <p>{{ prediction_text }}</p>
-    <a href="/">Back to Form</a>
+    <a href="/">Return</a>
 </body>
 </html>
