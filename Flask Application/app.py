@@ -24,7 +24,7 @@ def y_predict():
     scaled_y = y_trans.inverse_transform(pred_df)
     result_text = f"Permanent Magnet surface temperature: {float(scaled_y[0][0])} °C"
 
-    return render_template('result.html', prediction_text=result_text)
+    return render_template('result.html', input_data=x_input, prediction_text=result_text)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
