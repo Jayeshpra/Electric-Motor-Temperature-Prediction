@@ -5,8 +5,8 @@ import joblib
 
 app = Flask(__name__)
 model = joblib.load("D:\\Jayesh\\Git\\GitHub repos\\Electric-Motor-Temperature-Prediction\\Model Building\\decision_tree_model.save")
-x_trans = joblib.load("D:\\Jayesh\\Git\\GitHub repos\\Electric-Motor-Temperature-Prediction\\Model Building\\mm_scaler_x.save")
-y_trans = joblib.load("D:\\Jayesh\\Git\\GitHub repos\\Electric-Motor-Temperature-Prediction\\Model Building\\mm_scaler_y.save")
+x_trans = joblib.load("D:\\Jayesh\\Git\\GitHub repos\\Electric-Motor-Temperature-Prediction\\Model Building\\mm_scaler_x.joblib")
+y_trans = joblib.load("D:\\Jayesh\\Git\\GitHub repos\\Electric-Motor-Temperature-Prediction\\Model Building\\mm_scaler_y.joblib")
 
 app = Flask(__name__)
 
@@ -22,9 +22,9 @@ def y_predict():
     pred_value = model.predict(scaled_x)
     pred_df = pd.DataFrame(pred_value)
     scaled_y = y_trans.inverse_transform(pred_df)
-    result_text = f"Permanent Magnet surface temperature: {scaled_y} °C"
+    result_text = f"Permanent Magnet surface temperature: {float(scaled_y[0][0])} °C"
 
-    return render_template('result.html', prediction_text=scaled_y)
+    return render_template('result.html', prediction_text=result_text)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
