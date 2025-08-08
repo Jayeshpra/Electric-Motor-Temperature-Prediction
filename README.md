@@ -4,7 +4,7 @@
 
 ### 📌 Project Overview
 
-This project performs **exploratory data analysis (EDA)** on a dataset containing parameters from a Permanent Magnet Synchronous Motor (PMSM). The goal is to understand relationships between motor parameters and prepare insights that could be used for **temperature prediction modeling**.
+This project performs **exploratory data analysis (EDA)** on a dataset containing parameters from a Permanent Magnet Synchronous Motor (PMSM) and predicts the **Permanent Magnet (PM) temperature** of an electric motor using various machine learning models. It uses features such as current, voltage, ambient temperature, motor speed, and coolant temperature to make predictions.
 
 ### 📂 Dataset
 
