@@ -1,0 +1,61 @@
+body{
+    background: url('body_background.jpg') no-repeat;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+div{
+    width: 350px;
+    justify-self: center;
+    text-align: left;
+}
+
+h1{
+    font-size: 40px;
+    margin-top: 70px;
+    font-weight: 800;
+}
+
+h2{
+    font-size: 30px;
+    margin-top: 80px;
+    font-weight: 600;
+}
+
+li{
+    margin: 10px 10px;
+    font-size: 17px;
+}
+
+p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+a{
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+}
+
+a{
+    display: inherit;
+    align-content: center;
+    justify-self: center;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+a:hover{
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
