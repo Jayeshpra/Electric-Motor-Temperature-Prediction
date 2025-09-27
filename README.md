@@ -1,5 +1,9 @@
 # Electric-Motor-Temperature-Prediction
 
+
+![image alt](https://github.com/Jayeshpra/Electric-Motor-Temperature-Prediction/blob/main/Home_page.png)
+
+
 ## Data Analysis
 
 ### 📌 Project Overview
