@@ -5,6 +5,8 @@
 
 ![image alt](https://github.com/Jayeshpra/Electric-Motor-Temperature-Prediction/blob/main/input_filling.png)
 
+![image alt](https://github.com/Jayeshpra/Electric-Motor-Temperature-Prediction/blob/main/Output_page.png)
+
 
 ## Data Analysis
 
