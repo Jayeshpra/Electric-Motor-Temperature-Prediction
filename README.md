@@ -3,6 +3,8 @@
 
 ![image alt](https://github.com/Jayeshpra/Electric-Motor-Temperature-Prediction/blob/main/Home_page.png)
 
+![image alt](https://github.com/Jayeshpra/Electric-Motor-Temperature-Prediction/blob/main/input_filling.png)
+
 
 ## Data Analysis
 
